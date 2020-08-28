@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:resource="clr-namespace:Cyclon.Resources"
+            x:Class="Cyclon.MainPage"
+            NavigationPage.HasNavigationBar="false">
+
+    <StackLayout Margin="10,35,10,10">
+
+        <Label 
+            Margin="0,20,0,0"
+            Text="Cyclon Mobile"
+            HorizontalOptions="Center"
+            FontSize="Title"
+            TextColor="Black"/>
+
+        <Image 
+            Margin="0,60,0,30"
+            HorizontalOptions="Center"
+            Source="Images/CyclonMini.jpg"
+            Aspect="Fill"
+            HeightRequest="200"
+            WidthRequest="200"/>
+
+        <Button 
+            Margin="0,30,0,0"
+            Text="{x:Static resource:AppResources.register}"
+            BackgroundColor="#5e57e6"
+            TextColor="White"
+            Clicked="toRegister"/>
+
+        <Label
+            HorizontalOptions="Center"
+            Margin="0,15,0,0"
+            Text="{x:Static resource:AppResources.has_account}"
+            FontSize="Medium"
+            TextColor="Black"
+            x:Name="labelLogin"/>
+
+    </StackLayout>
+</ContentPage>

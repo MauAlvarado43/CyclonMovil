@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- ***************************** -->
+  <!--            MainPage           -->
+  <!-- ***************************** -->
+
+  <data name="register" xml:space="preserve">
+        <value>Register</value>
+  </data>
+
+  <data name="register_page" xml:space="preserve">
+    <value>REGISTER</value>
+  </data>
+  
+  <data name="login" xml:space="preserve">
+      <value>Log in</value>
+  </data>
+
+  <data name="login_facebook" xml:space="preserve">
+      <value>Log in with Facebook</value>
+  </data>
+
+  <data name="login_google" xml:space="preserve">
+      <value>Log in with Google</value>
+  </data>
+
+  <data name="has_account" xml:space="preserve">
+      <value>Do you have already an account? Log in</value>
+  </data>
+
+  <!-- ***************************** -->
+  <!--            LoginPage          -->
+  <!-- ***************************** -->
+
+  <data name="name" xml:space="preserve">
+        <value>Name</value>
+  </data>
+
+  <data name="lastName" xml:space="preserve">
+        <value>Last Name</value>
+  </data>
+
+  <data name="email" xml:space="preserve">
+        <value>Email</value>
+  </data>
+
+  <data name="password" xml:space="preserve">
+        <value>Password</value>
+  </data>
+
+  <data name="cpassword" xml:space="preserve">
+        <value>Confirm password</value>
+  </data>
+
+  <!-- ***************************** -->
+  <!--            Errors             -->
+  <!-- ***************************** -->
+
+  <data name="404" xml:space="preserve">
+        <value>404 Page not found</value>
+  </data>
+
+  <data name="500" xml:space="preserve">
+    <value>500 Internal error</value>
+  </data>
+
+  <data name="IP_NOT_FOUND" xml:space="preserve">
+    <value>Your IP address cannot be located</value>
+  </data>
+
+  <data name="DATA_SUBMITED_INVALID" xml:space="preserve">
+    <value>The data submited is invalid</value>
+  </data>
+
+  <data name="DATA_INVALID" xml:space="preserve">
+    <value>The data invalid</value>
+  </data>
+
+  <data name="DATA_EMPTY" xml:space="preserve">
+    <value>The data can not be empty</value>
+  </data>
+
+  <data name="PASSWORD_EMPTY" xml:space="preserve">
+    <value>The password can not be empty</value>
+  </data>
+
+  <data name="PASSWORD_SHORT" xml:space="preserve">
+    <value>The password must have more than 8 characters</value>
+  </data>
+
+  <data name="PASSWORD_LONG" xml:space="preserve">
+    <value>The password must not be more than 50 characters</value>
+  </data>
+
+  <data name="PASSWORD_DONT_MATCH" xml:space="preserve">
+    <value>The passwords do not match</value>
+  </data>
+
+  <data name="DATA_SPACES_AND_LETTERS" xml:space="preserve">
+    <value>The data can only have letters and / or spaces</value>
+  </data>
+
+  <data name="EMAIL_FORMAT" xml:space="preserve">
+    <value>Email format is invalid</value>
+  </data>
+
+  <data name="DATA_LONG" xml:space="preserve">
+    <value>The data must not be more than 50 character</value>
+  </data>
+
+  <data name="EMAIL_REGISTERED" xml:space="preserve">
+    <value>The email entered is already registered</value>
+  </data>
+
+  <data name="PASSWORD_INCORRECT" xml:space="preserve">
+    <value>The password is invalid</value>  
+  </data>
+
+  <data name="USER_NOT_FOUND" xml:space="preserve">
+    <value>The user is not exist</value>
+  </data>
+
+  <data name="TOKEN_INVALID" xml:space="preserve">
+    <value>Invalid token</value>
+  </data>
+
+  <!-- ***************************** -->
+  <!--            Messages           -->
+  <!-- ***************************** -->
+
+</root>

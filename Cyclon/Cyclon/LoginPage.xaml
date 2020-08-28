@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:resource="clr-namespace:Cyclon.Resources"
+    x:Class="Cyclon.LoginPage"
+    NavigationPage.HasNavigationBar="false">
+
+    <ScrollView Orientation="Vertical">
+
+        <ScrollView.Content>
+
+            <StackLayout>
+
+                <Label 
+                    Text="{x:Static resource:AppResources.email}"
+                    TextColor="Black"
+                    FontSize="Small"/>
+
+                <Editor 
+                    Placeholder="example@example.com"
+                    x:Name="email"/>
+
+                <Label 
+                    Text="{x:Static resource:AppResources.password}"
+                    TextColor="Black"
+                    FontSize="Small"/>
+
+                <Editor 
+                    Placeholder="**********"
+                    x:Name="password"/>
+
+                <Button 
+                    Margin="0,30,0,0"
+                    Text="{x:Static resource:AppResources.login}"
+                    BackgroundColor="#5e57e6"
+                    Clicked="login"
+                    TextColor="White"/>
+
+                <Button 
+                    Margin="0,30,0,0"
+                    Text="{x:Static resource:AppResources.login_facebook}"
+                    BackgroundColor="#5e57e6"
+                    Clicked="loginFacebook"
+                    TextColor="White"/>
+
+                <Button 
+                    Margin="0,30,0,0"
+                    Text="{x:Static resource:AppResources.login_google}"
+                    BackgroundColor="#5e57e6"
+                    Clicked="loginGoogle"
+                    TextColor="White"/>
+
+
+            </StackLayout>
+            
+        </ScrollView.Content>
+
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ***************************** -->
+  <!--            MainPage           -->
+  <!-- ***************************** -->
+
+  <data name="register" xml:space="preserve">
+          <value>Regístrate</value>
+  </data>
+
+  <data name="register_page" xml:space="preserve">
+    <value>REGISTRO</value>
+  </data>
+  
+  <data name="login" xml:space="preserve">
+          <value>Iniciar sesión</value>
+  </data>
+
+  <data name="login_facebook" xml:space="preserve">
+      <value>Iniciar sesión con Facebook</value>
+  </data>
+
+  <data name="login_google" xml:space="preserve">
+     <value>Iniciar sesión con Google</value>
+  </data>
+
+  <data name="has_account" xml:space="preserve">
+      <value>¿Ya tienes una cuenta? Inicia sesión</value>
+  </data>
+
+  <!-- ***************************** -->
+  <!--            LoginPage          -->
+  <!-- ***************************** -->
+
+  <data name="name" xml:space="preserve">
+        <value>Nombre (s)</value>
+  </data>
+
+  <data name="lastName" xml:space="preserve">
+        <value>Apellidos (s)</value>
+  </data>
+
+  <data name="email" xml:space="preserve">
+        <value>Correo electrónico</value>
+  </data>
+
+  <data name="password" xml:space="preserve">
+        <value>Contraseña</value>
+  </data>
+
+  <data name="cpassword" xml:space="preserve">
+        <value>Confirmar contraseña</value>
+  </data>
+
+  <!-- ***************************** -->
+  <!--            Errors             -->
+  <!-- ***************************** -->
+
+  <data name="404" xml:space="preserve">
+        <value>404 Ruta no encontrada</value>
+  </data>
+
+  <data name="500" xml:space="preserve">
+    <value>500 Error en el servidor</value>
+  </data>
+  
+  <data name="IP_NOT_FOUND" xml:space="preserve">
+    <value>No se ha podido localizar su dirección ip</value>
+  </data>
+  
+  <data name="DATA_SUBMITED_INVALID" xml:space="preserve">
+    <value>Los datos recibidos no son válidos</value>
+  </data>
+  
+  <data name="DATA_INVALID" xml:space="preserve">
+    <value>El dato ingresados no es válido</value>
+  </data>
+  
+  <data name="DATA_EMPTY" xml:space="preserve">
+    <value>El dato ingresado no puede estar vacío</value>
+  </data>
+  
+  <data name="PASSWORD_EMPTY" xml:space="preserve">
+    <value>La contraseña no puede estar vacía</value>
+  </data>
+  
+  <data name="PASSWORD_SHORT" xml:space="preserve">
+    <value>La contraseña debe tener más de 8 caracteres</value>
+  </data>
+  
+  <data name="PASSWORD_LONG" xml:space="preserve">
+    <value>La contraseña no debe tener más de 50 caracteres</value>
+  </data>
+  
+  <data name="PASSWORD_DONT_MATCH" xml:space="preserve">
+    <value>Las contraseñas no coinciden</value>
+  </data>
+  
+  <data name="DATA_SPACES_AND_LETTERS" xml:space="preserve">
+    <value>El dato ingresado solo puede tener letras y/o espacios</value>
+  </data>
+  
+  <data name="EMAIL_FORMAT" xml:space="preserve">
+    <value>El formato del correo electrónico es inválido</value>
+  </data>
+  
+  <data name="DATA_LONG" xml:space="preserve">
+    <value>El dato ingresado no puede tener más de 50 caracteres</value>
+  </data>
+
+  <data name="EMAIL_REGISTERED" xml:space="preserve">
+    <value>El correo electrónico ingresado ya está registrado</value>
+  </data>
+  
+  <data name="PASSWORD_INCORRECT" xml:space="preserve">
+    <value>La contraseña es incorrecta</value>  
+  </data>
+  
+  <data name="USER_NOT_FOUND" xml:space="preserve">
+    <value>El usuario no existe</value>
+  </data>
+  
+  <data name="TOKEN_INVALID" xml:space="preserve">
+    <value>Token inválido</value>
+  </data>
+
+  <!-- ***************************** -->
+  <!--            Messages           -->
+  <!-- ***************************** -->
+
+</root>

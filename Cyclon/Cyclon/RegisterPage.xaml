@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:resource="clr-namespace:Cyclon.Resources"
+    x:Class="Cyclon.RegisterPage"
+    NavigationPage.HasNavigationBar="false">
+
+    <ScrollView Orientation="Vertical">
+
+        <ScrollView.Content>
+
+            <StackLayout>
+
+                <Label
+                    Margin="0,20,0,20"
+                    Text="{x:Static resource:AppResources.register_page}"
+                    TextColor="Black"
+                    FontSize="Large"
+                    HorizontalOptions="Center"/>
+
+                <!-- Name -->
+
+                <Label 
+                    Text="{x:Static resource:AppResources.name}"
+                    TextColor="Black"
+                    FontSize="Small"/>
+
+                <Entry 
+                    ReturnType="Next"
+                    Keyboard="Text"
+                    Placeholder="example"
+                    x:Name="name"/>
+
+                <Label 
+                    Text=""
+                    TextColor="Red"
+                    FontSize="Small"
+                    IsVisible="False"
+                    x:Name="nameError"/>
+
+                <!-- Last Name -->
+
+                <Label 
+                    Text="{x:Static resource:AppResources.lastName}"
+                    TextColor="Black"
+                    FontSize="Small"/>
+
+                <Entry 
+                    ReturnType="Next"
+                    Keyboard="Text"
+                    Placeholder="example"
+                    x:Name="lastName"/>
+
+                <Label 
+                    Text=""
+                    TextColor="Red"
+                    FontSize="Small"
+                    IsVisible="False"
+                    x:Name="lastNameError"/>
+
+                <!-- Email -->
+
+                <Label 
+                    Text="{x:Static resource:AppResources.email}"
+                    TextColor="Black"
+                    FontSize="Small"/>
+
+                <Entry 
+                    ReturnType="Next"
+                    Keyboard="Email"
+                    Placeholder="example@example.com"
+                    x:Name="email"/>
+
+                <Label 
+                    Text=""
+                    TextColor="Red"
+                    FontSize="Small"
+                    IsVisible="False"
+                    x:Name="emailError"/>
+
+                <!-- Password -->
+
+                <Label 
+                    Text="{x:Static resource:AppResources.password}"
+                    TextColor="Black"
+                    FontSize="Small"/>
+
+                <Entry 
+                    ReturnType="Next"
+                    IsPassword="True"
+                    Placeholder="**********"
+                    x:Name="password"/>
+
+                <Label 
+                    Text="{x:Static resource:AppResources.cpassword}"
+                    TextColor="Black"
+                    FontSize="Small"/>
+
+                <Entry 
+                    ReturnType="Done"
+                    IsPassword="True"
+                    Placeholder="***********"
+                    x:Name="cpassword"/>
+
+                <Label 
+                    Text=""
+                    TextColor="Red"
+                    FontSize="Small"
+                    IsVisible="False"
+                    x:Name="passwordError"/>
+
+                <Button 
+                    Margin="0,30,0,0"
+                    Text="{x:Static resource:AppResources.register}"
+                    BackgroundColor="#5e57e6"
+                    Clicked="register"
+                    TextColor="White"/>
+
+            </StackLayout>
+
+        </ScrollView.Content>
+        
+    </ScrollView>
+
+
+</ContentPage>
