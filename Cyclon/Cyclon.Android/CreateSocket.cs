@@ -14,7 +14,6 @@ namespace Cyclon.Droid {
         public void createSocket()
         {
             var intent = new Android.Content.Intent(Android.App.Application.Context, typeof(CyclonSocket));
-            Debug.WriteLine(intent);
             Android.App.Application.Context.StartService(intent);
         }
     }

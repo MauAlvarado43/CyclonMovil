@@ -31,6 +31,7 @@ namespace Cyclon.iOS
         //Para tratar el socket de IOS
         public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
         {
+            new CreateSocket().ConnectSocket();
             completionHandler(UIBackgroundFetchResult.NewData);
         }
 
