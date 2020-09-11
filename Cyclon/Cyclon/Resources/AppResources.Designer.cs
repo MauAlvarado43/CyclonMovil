@@ -79,6 +79,42 @@ namespace Cyclon.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Account created successfully! Log in....
+        /// </summary>
+        internal static string ACCOUNT_CREATED_SUCCESS {
+            get {
+                return ResourceManager.GetString("ACCOUNT_CREATED_SUCCESS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Alert!.
+        /// </summary>
+        internal static string alert {
+            get {
+                return ResourceManager.GetString("alert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Contact.
+        /// </summary>
+        internal static string contact {
+            get {
+                return ResourceManager.GetString("contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a $[0] $[1] to $[2] km from you has been detected.
+        /// </summary>
+        internal static string contentAlert {
+            get {
+                return ResourceManager.GetString("contentAlert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Confirm password.
         /// </summary>
         internal static string cpassword {
@@ -133,6 +169,15 @@ namespace Cyclon.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a the tropical depression.
+        /// </summary>
+        internal static string dt {
+            get {
+                return ResourceManager.GetString("dt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Email.
         /// </summary>
         internal static string email {
@@ -160,11 +205,47 @@ namespace Cyclon.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Verify current email before changing.
+        /// </summary>
+        internal static string EMAIL_VERIFY {
+            get {
+                return ResourceManager.GetString("EMAIL_VERIFY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a the hurricaine.
+        /// </summary>
+        internal static string h {
+            get {
+                return ResourceManager.GetString("h", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Do you have already an account? Log in.
         /// </summary>
         internal static string has_account {
             get {
                 return ResourceManager.GetString("has_account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Data updated succesfully.
+        /// </summary>
+        internal static string INFO_UPDATED {
+            get {
+                return ResourceManager.GetString("INFO_UPDATED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Data updated succesfully. Log in again.
+        /// </summary>
+        internal static string INFO_UPDATED_RELOGIN {
+            get {
+                return ResourceManager.GetString("INFO_UPDATED_RELOGIN", resourceCulture);
             }
         }
         
@@ -183,6 +264,33 @@ namespace Cyclon.Resources {
         internal static string lastName {
             get {
                 return ResourceManager.GetString("lastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Loading.
+        /// </summary>
+        internal static string loading {
+            get {
+                return ResourceManager.GetString("loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a en.
+        /// </summary>
+        internal static string location {
+            get {
+                return ResourceManager.GetString("location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Log in....
+        /// </summary>
+        internal static string LOG_IN {
+            get {
+                return ResourceManager.GetString("LOG_IN", resourceCulture);
             }
         }
         
@@ -210,6 +318,33 @@ namespace Cyclon.Resources {
         internal static string login_google {
             get {
                 return ResourceManager.GetString("login_google", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Login in Cyclon.
+        /// </summary>
+        internal static string loginCyclon {
+            get {
+                return ResourceManager.GetString("loginCyclon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Logout.
+        /// </summary>
+        internal static string logout {
+            get {
+                return ResourceManager.GetString("logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Map.
+        /// </summary>
+        internal static string map {
+            get {
+                return ResourceManager.GetString("map", resourceCulture);
             }
         }
         
@@ -277,6 +412,33 @@ namespace Cyclon.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Password updated, log in.
+        /// </summary>
+        internal static string PASSWORD_UPDATED {
+            get {
+                return ResourceManager.GetString("PASSWORD_UPDATED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enter your current password.
+        /// </summary>
+        internal static string PASSWORD_VERIFY {
+            get {
+                return ResourceManager.GetString("PASSWORD_VERIFY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Receive alerts.
+        /// </summary>
+        internal static string receiveAlerts {
+            get {
+                return ResourceManager.GetString("receiveAlerts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Register.
         /// </summary>
         internal static string register {
@@ -295,11 +457,110 @@ namespace Cyclon.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Register in Cyclon.
+        /// </summary>
+        internal static string registerCyclon {
+            get {
+                return ResourceManager.GetString("registerCyclon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cyclon settings.
+        /// </summary>
+        internal static string settingCyclon {
+            get {
+                return ResourceManager.GetString("settingCyclon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Settings.
+        /// </summary>
+        internal static string settings {
+            get {
+                return ResourceManager.GetString("settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Location updated succesfully.
+        /// </summary>
+        internal static string SUCCESS_LOCATION {
+            get {
+                return ResourceManager.GetString("SUCCESS_LOCATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Invalid token.
         /// </summary>
         internal static string TOKEN_INVALID {
             get {
                 return ResourceManager.GetString("TOKEN_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a the tropical storm.
+        /// </summary>
+        internal static string tt {
+            get {
+                return ResourceManager.GetString("tt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tweets.
+        /// </summary>
+        internal static string tweets {
+            get {
+                return ResourceManager.GetString("tweets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update Information.
+        /// </summary>
+        internal static string update {
+            get {
+                return ResourceManager.GetString("update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update Data.
+        /// </summary>
+        internal static string updateData {
+            get {
+                return ResourceManager.GetString("updateData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update Location.
+        /// </summary>
+        internal static string updateLocation {
+            get {
+                return ResourceManager.GetString("updateLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update password.
+        /// </summary>
+        internal static string updatePassword {
+            get {
+                return ResourceManager.GetString("updatePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Account does not exist.
+        /// </summary>
+        internal static string USER_NOT_EXIST {
+            get {
+                return ResourceManager.GetString("USER_NOT_EXIST", resourceCulture);
             }
         }
         

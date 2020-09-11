@@ -19,6 +19,8 @@ namespace Cyclon.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+
+            var _ = new TouchTracking.Forms.iOS.TouchEffect();
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 
             FacebookClientManager.Initialize(app, options);

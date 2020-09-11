@@ -17,7 +17,7 @@
         <Image 
             Margin="0,60,0,30"
             HorizontalOptions="Center"
-            Source="Images/CyclonMini.jpg"
+            Source="CyclonMini.jpg"
             Aspect="Fill"
             HeightRequest="200"
             WidthRequest="200"/>
@@ -34,6 +34,7 @@
             Margin="0,15,0,0"
             Text="{x:Static resource:AppResources.has_account}"
             FontSize="Medium"
+            TextDecorations="Underline"
             TextColor="Black"
             x:Name="labelLogin"/>
 

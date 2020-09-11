@@ -9,12 +9,12 @@ namespace Cyclon.Utils {
         {
             try
             {
-                var request = new GeolocationRequest(GeolocationAccuracy.Medium);
+                var request = new GeolocationRequest(GeolocationAccuracy.High);
                 var location = await Geolocation.GetLocationAsync(request);
 
                 Geo position = new Geo();
                 position.lat = location.Latitude;
-                position.lng = location.Longitude;
+                position.lng = location.Longitude;     
 
                 return position;
 

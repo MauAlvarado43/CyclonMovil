@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Cyclon"
+    BarBackgroundColor="#2196F3"
+    xmlns:resource="clr-namespace:Cyclon.Resources"
+    NavigationPage.HasNavigationBar="False"
+    NavigationPage.HasBackButton="False"
+    BarTextColor="White"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.BarItemColor="White"
+    android:TabbedPage.BarSelectedItemColor="Black"
+    x:Class="Cyclon.AppPage">
+
+    <TabbedPage.Children>
+
+        <NavigationPage Title="{x:Static resource:AppResources.map}" Icon="Images/map.png" NavigationPage.HasNavigationBar="false">
+            <x:Arguments>
+                <views:Map />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="{x:Static resource:AppResources.tweets}" Icon="Images/twitter.png" NavigationPage.HasNavigationBar="false">
+            <x:Arguments>
+                <views:Twitter />
+            </x:Arguments>
+        </NavigationPage>
+
+        <ContentPage Title="{x:Static resource:AppResources.settings}" Icon="Images/config.png" NavigationPage.HasNavigationBar="false">
+
+            <ContentPage.Resources>
+                <ResourceDictionary>
+
+                    <Style x:Key="labelTitleStyle" TargetType="Label">
+                        <Setter Property = "FontFamily" Value="Arial" />
+                        <Setter Property = "TextColor"  Value="Black" />
+                        <Setter Property = "HorizontalOptions"  Value="CenterAndExpand" />
+                        <Setter Property = "FontSize"  Value="Title" />
+                        <Setter Property = "TextTransform"  Value="Uppercase" />
+                    </Style>
+
+                    <Style x:Key="labelStyle" TargetType="Label">
+                        <Setter Property = "FontFamily" Value="Arial" />
+                        <Setter Property = "TextColor"  Value="Black" />
+                        <Setter Property = "HorizontalOptions"  Value="StartAndExpand" />
+                        <Setter Property = "FontSize"  Value="Medium" />
+                        <Setter Property="Margin" Value="10,0,10,0" />
+                    </Style>
+
+                    <Style x:Key="buttonStyle" TargetType="Button">
+                        <Setter Property="Margin" Value="10,10,10,10" />
+                        <Setter Property="TextColor" Value="White"/>
+                    </Style>
+
+                </ResourceDictionary>
+            </ContentPage.Resources>
+            
+            <ContentPage.Content>
+                <StackLayout>
+
+                    <Label 
+                        Margin="0,30,0,30"
+                        Text="{x:Static resource:AppResources.settingCyclon}"
+                        Style="{StaticResource labelTitleStyle}"/>
+
+                    <Button 
+                        Text="{x:Static resource:AppResources.logout}"
+                        Margin="10,0,10,10"
+                        TextColor="White"
+                        BackgroundColor="#5e57e6"
+                        Clicked="logout"/>
+
+                    <Button 
+                        Text="{x:Static resource:AppResources.update}" 
+                        Style="{StaticResource buttonStyle}"
+                        BackgroundColor="#3e3b4c"
+                        Clicked="update"/>
+
+                    <Button 
+                        Text="{x:Static resource:AppResources.contact}" 
+                        Style="{StaticResource buttonStyle}"
+                        BackgroundColor="#262431"
+                        Clicked="contact"/>
+
+                    <StackLayout 
+                            Margin="10,0,10,0"
+                            Orientation="Horizontal" 
+                            Spacing="0" 
+                            HorizontalOptions="FillAndExpand">
+                        <Label 
+                            Text="{x:Static resource:AppResources.receiveAlerts}" 
+                            Style="{StaticResource labelStyle}"/>
+                        <Switch 
+                            OnColor="#3e3b4c"
+                            ThumbColor="#262431"
+                            Toggled="changeAlerts"
+                            HorizontalOptions="EndAndExpand"
+                            x:Name="alerts"/>
+                        
+                        
+                    </StackLayout>
+
+                </StackLayout>
+            </ContentPage.Content>
+            
+        </ContentPage>
+
+    </TabbedPage.Children>
+
+</TabbedPage>

@@ -12,13 +12,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  
+  <data name="location" xml:space="preserve">
+     <value>es</value>
+  </data>
 
   <!-- ***************************** -->
   <!--            MainPage           -->
   <!-- ***************************** -->
 
+  <data name="dt" xml:space="preserve">
+     <value>la depresión tropical</value>
+  </data>
+
+  <data name="tt" xml:space="preserve">
+     <value>la tormenta tropical</value>
+  </data>
+
+  <data name="h" xml:space="preserve">
+     <value>el huracán</value>
+  </data>
+
+  <data name="alert" xml:space="preserve">
+     <value>¡Alerta!</value>
+  </data>
+
+  <data name="contentAlert" xml:space="preserve">
+     <value>Se ha detectado $[0] $[1] a $[2] km de ti.</value>
+  </data>
+
+  <data name="settingCyclon" xml:space="preserve">
+     <value>Configuración de Cyclon</value>
+  </data>
+
+  <data name="registerCyclon" xml:space="preserve">
+     <value>Regístrate en Cyclon</value>
+  </data>
+
+  <data name="loginCyclon" xml:space="preserve">
+     <value>Iniciar sesión en Cyclon</value>
+  </data>
+
+  <data name="loading" xml:space="preserve">
+     <value>Cargando</value>
+  </data>
+
   <data name="register" xml:space="preserve">
-          <value>Regístrate</value>
+     <value>Regístrate</value>
   </data>
 
   <data name="register_page" xml:space="preserve">
@@ -63,6 +103,50 @@
 
   <data name="cpassword" xml:space="preserve">
         <value>Confirmar contraseña</value>
+  </data>
+
+  <!-- ***************************** -->
+  <!--           ButtonsApp          -->
+  <!-- ***************************** -->
+
+  <data name="map" xml:space="preserve">
+        <value>Mapa</value>
+  </data>
+
+  <data name="tweets" xml:space="preserve">
+        <value>Tweets</value>
+  </data>
+
+  <data name="settings" xml:space="preserve">
+        <value>Opciones</value>
+  </data>
+
+  <data name="logout" xml:space="preserve">
+        <value>Cerrar sesión</value>
+  </data>
+
+  <data name="update" xml:space="preserve">
+        <value>Actualizar datos</value>
+  </data>
+
+  <data name="updateData" xml:space="preserve">
+        <value>Actualizar información</value>
+  </data>
+
+  <data name="updateLocation" xml:space="preserve">
+        <value>Actualizar ubicación</value>
+  </data>
+
+  <data name="contact" xml:space="preserve">
+        <value>Contacto</value>
+  </data>
+
+  <data name="updatePassword" xml:space="preserve">
+        <value>Actualizar contraseña</value>
+  </data>
+
+  <data name="receiveAlerts" xml:space="preserve">
+      <value>Recibir alertas</value>
   </data>
 
   <!-- ***************************** -->
@@ -137,8 +221,48 @@
     <value>Token inválido</value>
   </data>
 
+  <data name="EMAIL_VERIFY" xml:space="preserve">
+    <value>Verifique el correo actual primero</value>
+  </data>
+
   <!-- ***************************** -->
   <!--            Messages           -->
   <!-- ***************************** -->
+
+  <data name="ACCOUNT_CREATED_SUCCESS" xml:space="preserve">
+    <value>¡Cuenta creada! Iniciando sesión...</value>
+  </data>
+
+  <data name="LOG_IN" xml:space="preserve">
+    <value>Iniciando sesión...</value>
+  </data>
+
+  <data name="USER_NOT_EXIST" xml:space="preserve">
+    <value>La cuenta no existe</value>
+  </data>
+
+  <data name="SUCCESS_LOCATION" xml:space="preserve">
+    <value>Ubicación actualizada exitosamente</value>
+  </data>
+
+  <data name="PASSWORD_UPDATED" xml:space="preserve">
+    <value>Contraseña actualizada, inicie sesión</value>
+  </data>
+
+  <data name="PASSWORD_VERIFY" xml:space="preserve">
+    <value>Ingrese su contraseña actual</value>
+  </data>
+
+  <data name="PASSWORD_VERIFY" xml:space="preserve">
+    <value>Ingrese su contraseña actual</value>
+  </data>
+
+  <data name="INFO_UPDATED" xml:space="preserve">
+    <value>Datos actualizados correctamente</value>
+  </data>
+
+  <data name="INFO_UPDATED_RELOGIN" xml:space="preserve">
+    <value>Datos actualizados correctamente. Inicie sesión</value>
+  </data>
 
 </root>

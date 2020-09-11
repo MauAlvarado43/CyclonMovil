@@ -1,3 +1,5 @@
+Acr.UserDialogs
+AndHUD
 Bolts.AppLinks
 Bolts.Tasks
 EngineIoClientDotNet
@@ -7,6 +9,8 @@ Plugin.FacebookClient
 Plugin.GoogleClient
 Plugin.LocalNotifications
 SocketIoClientDotNet
+TouchTracking.Droid
+TouchTracking.Forms.Droid
 WebSocket4Net
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime

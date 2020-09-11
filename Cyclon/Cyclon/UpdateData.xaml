@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:resource="clr-namespace:Cyclon.Resources"
+             NavigationPage.HasNavigationBar="false"
+             mc:Ignorable="d"
+             x:Class="Cyclon.UpdateData">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="labelTitleStyle" TargetType="Label">
+                <Setter Property = "FontFamily" Value="Arial" />
+                <Setter Property = "TextColor"  Value="Black" />
+                <Setter Property = "HorizontalOptions"  Value="CenterAndExpand" />
+                <Setter Property = "FontSize"  Value="Title" />
+                <Setter Property = "TextTransform"  Value="Uppercase" />
+            </Style>
+            
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property = "FontFamily" Value="Arial" />
+                <Setter Property = "TextColor"  Value="Black" />
+                <Setter Property = "HorizontalOptions"  Value="FillAndExpand" />
+                <Setter Property = "FontSize"  Value="Medium" />
+                <Setter Property="Margin" Value="10,0,10,0" />
+            </Style>
+
+            <Style x:Key="labelErrorStyle" TargetType="Label">
+                <Setter Property = "FontFamily" Value="Arial" />
+                <Setter Property = "TextColor"  Value="Red" />
+                <Setter Property = "HorizontalOptions"  Value="FillAndExpand" />
+                <Setter Property = "FontSize"  Value="Small" />
+            </Style>
+
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Setter Property="Margin" Value="10,0,10,5" />
+            </Style>
+
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="Margin" Value="10,0,10,10" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        
+        <ScrollView Orientation="Vertical">
+
+            <ScrollView.Content>
+
+                <StackLayout>
+
+                    <Label
+                        Margin="0,30,0,30"
+                        Style="{StaticResource labelTitleStyle}"
+                        Text="{x:Static resource:AppResources.updateData}" />
+
+                    <!-- Name -->
+
+                    <Label 
+                        Text="{x:Static resource:AppResources.name}"
+                        Style="{StaticResource labelStyle}"/>
+
+                    <Entry 
+                        Style="{StaticResource entryStyle}"
+                        ReturnType="Next"
+                        Keyboard="Text"
+                        Placeholder="example"
+                        x:Name="name"/>
+
+                    <Label 
+                        Text=""
+                        Margin="10,0,10,5"
+                        Style="{StaticResource labelErrorStyle}"
+                        x:Name="nameError"/>
+
+                    <!-- Last Name -->
+
+                    <Label 
+                        Text="{x:Static resource:AppResources.lastName}"
+                        Style="{StaticResource labelStyle}"/>
+
+                    <Entry 
+                        Style="{StaticResource entryStyle}"
+                        ReturnType="Next"
+                        Keyboard="Text"
+                        Placeholder="example"
+                        x:Name="lastName"/>
+
+                    <Label 
+                        Text=""
+                        Margin="10,0,10,5"
+                        Style="{StaticResource labelErrorStyle}"
+                        x:Name="lastNameError"/>
+
+                    <!-- Email -->
+
+                    <StackLayout x:Name="containerEmail">
+                        <Label 
+                            Text="{x:Static resource:AppResources.email}"
+                            Style="{StaticResource labelStyle}"/>
+
+                        <Entry 
+                            Style="{StaticResource entryStyle}"
+                            ReturnType="Next"
+                            Keyboard="Email"
+                            Placeholder="example@example.com"
+                            x:Name="email"/>
+
+                        <Label 
+                            Text=""
+                            Margin="10,0,10,5"
+                            Style="{StaticResource labelErrorStyle}"
+                            x:Name="emailError"/>
+                        
+                    </StackLayout>
+
+                    <Button 
+                        Margin="10,5,10,15"
+                        Text="{x:Static resource:AppResources.update}"
+                        BackgroundColor="#5e57e6"
+                        Clicked="update"
+                        TextColor="White"/>
+
+                    <!-- Password -->
+
+                    <StackLayout x:Name="containerPassword">
+                        <Label 
+                            Text="{x:Static resource:AppResources.password}"
+                            Style="{StaticResource labelStyle}"/>
+
+                        <Entry 
+                            Style="{StaticResource entryStyle}"
+                            ReturnType="Next"
+                            IsPassword="True"
+                            Placeholder="**********"
+                            x:Name="password"/>
+
+                        <Label 
+                            Text="{x:Static resource:AppResources.cpassword}"
+                            Style="{StaticResource labelStyle}"/>
+
+                        <Entry 
+                            Style="{StaticResource entryStyle}"
+                            ReturnType="Done"
+                            IsPassword="True"
+                            Placeholder="***********"
+                            x:Name="cpassword"/>
+
+                        <Label 
+                            Text=""
+                            Margin="10,0,10,0"
+                            Style="{StaticResource labelErrorStyle}"
+                            x:Name="passwordError"/>
+
+                        <Button
+                            Style="{StaticResource buttonStyle}"
+                            Text="{x:Static resource:AppResources.updatePassword}"
+                            BackgroundColor="#5e57e6"
+                            Clicked="updatePassword"
+                            TextColor="White"/>
+
+                    </StackLayout>
+
+                    <Button 
+                        Margin="10,10,10,60"
+                        Text="{x:Static resource:AppResources.updateLocation}"
+                        BackgroundColor="#262431"
+                        Clicked="updateLocation"
+                        TextColor="White"/>
+
+                </StackLayout>
+
+            </ScrollView.Content>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

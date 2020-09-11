@@ -4,56 +4,170 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:resource="clr-namespace:Cyclon.Resources"
     x:Class="Cyclon.LoginPage"
+    xmlns:tt="clr-namespace:TouchTracking.Forms;assembly=TouchTracking.Forms"
     NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <Style x:Key="labelTitleStyle" TargetType="Label">
+                <Setter Property = "FontFamily" Value="Arial" />
+                <Setter Property = "TextColor"  Value="Black" />
+                <Setter Property = "HorizontalOptions"  Value="CenterAndExpand" />
+                <Setter Property = "FontSize"  Value="Title" />
+                <Setter Property = "TextTransform"  Value="Uppercase" />
+            </Style>
+
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property = "FontFamily" Value="Arial" />
+                <Setter Property = "TextColor"  Value="Black" />
+                <Setter Property = "HorizontalOptions"  Value="FillAndExpand" />
+                <Setter Property = "FontSize"  Value="Medium" />
+                <Setter Property="Margin" Value="10,0,10,0" />
+            </Style>
+
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Setter Property="Margin" Value="10,0,10,10" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <ScrollView Orientation="Vertical">
 
         <ScrollView.Content>
 
-            <StackLayout>
+            <Grid>
+                
+                <StackLayout
+                    VerticalOptions="CenterAndExpand">
+                 
+                    <Label 
+                        Margin="0,0,0,30"
+                        Text="{x:Static resource:AppResources.loginCyclon}"
+                        Style="{StaticResource labelTitleStyle}"/>
 
-                <Label 
-                    Text="{x:Static resource:AppResources.email}"
-                    TextColor="Black"
-                    FontSize="Small"/>
+                    <Label 
+                        Text="{x:Static resource:AppResources.email}"
+                        Style="{StaticResource labelStyle}"/>
 
-                <Editor 
-                    Placeholder="example@example.com"
-                    x:Name="email"/>
+                    <Entry 
+                        Style="{StaticResource entryStyle}"
+                        ReturnType="Next"
+                        Keyboard="Email"
+                        Placeholder="example@example.com"
+                        x:Name="email"/>
 
-                <Label 
-                    Text="{x:Static resource:AppResources.password}"
-                    TextColor="Black"
-                    FontSize="Small"/>
+                    <Label 
+                        Text="{x:Static resource:AppResources.password}"
+                        Style="{StaticResource labelStyle}"/>
 
-                <Editor 
-                    Placeholder="**********"
-                    x:Name="password"/>
+                    <Entry 
+                        Style="{StaticResource entryStyle}"
+                        ReturnType="Next"
+                        IsPassword="True"
+                        Placeholder="**********"
+                        x:Name="password"/>
 
-                <Button 
-                    Margin="0,30,0,0"
-                    Text="{x:Static resource:AppResources.login}"
-                    BackgroundColor="#5e57e6"
-                    Clicked="login"
-                    TextColor="White"/>
+                    <Button 
+                        Margin="10,0,10,10"
+                        Padding="0,10,0,10"
+                        Text="{x:Static resource:AppResources.login}"
+                        BackgroundColor="#5e57e6"
+                        Clicked="login"
+                        TextColor="White"/>
 
-                <Button 
-                    Margin="0,30,0,0"
-                    Text="{x:Static resource:AppResources.login_facebook}"
-                    BackgroundColor="#5e57e6"
-                    Clicked="loginFacebook"
-                    TextColor="White"/>
+                    <BoxView
+                        Margin="10,0,10,0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        HeightRequest="1"
+                        Color="#5b5d68"></BoxView>
 
-                <Button 
-                    Margin="0,30,0,0"
-                    Text="{x:Static resource:AppResources.login_google}"
-                    BackgroundColor="#5e57e6"
-                    Clicked="loginGoogle"
-                    TextColor="White"/>
+                    <StackLayout 
+                        x:Name="loginFacebookBtn"
+                        Margin="10,10,10,0"
+                        Padding="0,10,0,10"
+                        HorizontalOptions="FillAndExpand" 
+                        Orientation="Horizontal"
+                        BackgroundColor="#1977f3">
 
 
-            </StackLayout>
-            
+                        <StackLayout.Effects>
+                            <tt:TouchEffect TouchAction="facebookBtnAction"/>
+                        </StackLayout.Effects>
+
+                        <StackLayout
+                            HorizontalOptions="CenterAndExpand"
+                            Orientation="Horizontal">
+
+                            <Label
+                                Text="{x:Static resource:AppResources.login_facebook}"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                TextTransform="Uppercase"
+                                TextColor="White"/>
+
+                            <Image 
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Source="facebook_reverse.png"
+                                Aspect="Fill"
+                                HeightRequest="30"
+                                WidthRequest="30"/>
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout
+                        Margin="10,10,10,0"
+                        Padding="1,1,1,1"
+                        HorizontalOptions="FillAndExpand" 
+                        Orientation="Horizontal"
+                        BackgroundColor="Black">
+
+                        <StackLayout 
+                            x:Name="loginGoogleBtn"
+                            Padding="0,9,0,9"
+                            HorizontalOptions="FillAndExpand" 
+                            Orientation="Horizontal"
+                            BackgroundColor="White">
+
+                            <StackLayout.Effects>
+                                <tt:TouchEffect TouchAction="googleBtnAction"/>
+                            </StackLayout.Effects>
+
+                            <StackLayout
+                                HorizontalOptions="CenterAndExpand"
+                                Orientation="Horizontal">
+
+                                <Label 
+                                    x:Name="labelGoogleBtn"
+                                    Text="{x:Static resource:AppResources.login_google}"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Start"
+                                    TextTransform="Uppercase"
+                                    TextColor="Black"/>
+
+                                <Image 
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Center"
+                                    Source="google.png"
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    WidthRequest="30"/>
+
+                            </StackLayout>
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Grid>
+
         </ScrollView.Content>
 
     </ScrollView>

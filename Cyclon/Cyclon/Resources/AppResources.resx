@@ -12,10 +12,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+
+  <data name="location" xml:space="preserve">
+     <value>en</value>
+  </data>
   
   <!-- ***************************** -->
   <!--            MainPage           -->
   <!-- ***************************** -->
+
+  <data name="dt" xml:space="preserve">
+     <value>the tropical depression</value>
+  </data>
+
+  <data name="tt" xml:space="preserve">
+     <value>the tropical storm</value>
+  </data>
+
+  <data name="h" xml:space="preserve">
+     <value>the hurricaine</value>
+  </data>
+
+  <data name="alert" xml:space="preserve">
+     <value>Alert!</value>
+  </data>
+
+  <data name="contentAlert" xml:space="preserve">
+     <value>$[0] $[1] to $[2] km from you has been detected</value>
+  </data>
+
+  <data name="settingCyclon" xml:space="preserve">
+     <value>Cyclon settings</value>
+  </data>
+
+  <data name="registerCyclon" xml:space="preserve">
+     <value>Register in Cyclon</value>
+  </data>
+
+  <data name="loginCyclon" xml:space="preserve">
+     <value>Login in Cyclon</value>
+  </data>
+
+  <data name="loading" xml:space="preserve">
+     <value>Loading</value>
+  </data>
 
   <data name="register" xml:space="preserve">
         <value>Register</value>
@@ -63,6 +103,50 @@
 
   <data name="cpassword" xml:space="preserve">
         <value>Confirm password</value>
+  </data>
+
+  <!-- ***************************** -->
+  <!--           ButtonsApp          -->
+  <!-- ***************************** -->
+
+  <data name="map" xml:space="preserve">
+        <value>Map</value>
+  </data>
+
+  <data name="tweets" xml:space="preserve">
+        <value>Tweets</value>
+  </data>
+  
+  <data name="settings" xml:space="preserve">
+        <value>Settings</value>
+  </data>
+  
+  <data name="logout" xml:space="preserve">
+        <value>Logout</value>
+  </data>
+  
+  <data name="update" xml:space="preserve">
+        <value>Update Information</value>
+  </data>
+
+  <data name="updateData" xml:space="preserve">
+        <value>Update Data</value>
+  </data>
+
+  <data name="updateLocation" xml:space="preserve">
+        <value>Update Location</value>
+  </data>
+
+  <data name="contact" xml:space="preserve">
+        <value>Contact</value>
+  </data>
+  
+  <data name="updatePassword" xml:space="preserve">
+        <value>Update password</value>
+  </data>
+
+  <data name="receiveAlerts" xml:space="preserve">
+      <value>Receive alerts</value>
   </data>
 
   <!-- ***************************** -->
@@ -137,8 +221,44 @@
     <value>Invalid token</value>
   </data>
 
+  <data name="EMAIL_VERIFY" xml:space="preserve">
+    <value>Verify current email before changing</value>
+  </data>
+
   <!-- ***************************** -->
   <!--            Messages           -->
   <!-- ***************************** -->
+
+  <data name="ACCOUNT_CREATED_SUCCESS" xml:space="preserve">
+    <value>Account created successfully! Log in...</value>
+  </data>
+
+  <data name="LOG_IN" xml:space="preserve">
+    <value>Log in...</value>
+  </data>
+  
+  <data name="USER_NOT_EXIST" xml:space="preserve">
+    <value>Account does not exist</value>
+  </data>
+
+  <data name="SUCCESS_LOCATION" xml:space="preserve">
+    <value>Location updated succesfully</value>
+  </data>
+
+  <data name="PASSWORD_UPDATED" xml:space="preserve">
+    <value>Password updated, log in</value>
+  </data>
+
+  <data name="PASSWORD_VERIFY" xml:space="preserve">
+    <value>Enter your current password</value>
+  </data>
+
+  <data name="INFO_UPDATED" xml:space="preserve">
+    <value>Data updated succesfully</value>
+  </data>
+
+  <data name="INFO_UPDATED_RELOGIN" xml:space="preserve">
+    <value>Data updated succesfully. Log in again</value>
+  </data>
 
 </root>

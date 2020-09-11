@@ -16,6 +16,11 @@ using Plugin.GoogleClient.Shared;
 
 using Cyclon.Utils.Objects;
 using Cyclon.Utils;
+using Cyclon.Resources;
+
+using Acr.UserDialogs;
+
+using Xamarin.Essentials;
 
 namespace Cyclon {
 
@@ -26,8 +31,45 @@ namespace Cyclon {
         IGoogleClientManager _googleService = CrossGoogleClient.Current;
 
         public LoginPage() {
-
             InitializeComponent();
+        }
+
+        public void googleBtnAction(object sender, TouchTracking.TouchActionEventArgs args)
+        {
+            try
+            {
+                if (args.Type == TouchTracking.TouchActionType.Pressed)
+                {
+                    loginGoogleBtn.BackgroundColor = Color.FromHex("1e1e1e");
+                    labelGoogleBtn.TextColor = Color.FromHex("ffffff");
+                }
+                else
+                {
+                    loginGoogleBtn.BackgroundColor = Color.FromHex("ffffff");
+                    labelGoogleBtn.TextColor = Color.FromHex("000000");
+                    loginGoogle();
+                }
+            }
+            catch (Exception e)
+            {
+            }
+        }
+
+        public void facebookBtnAction(object sender, TouchTracking.TouchActionEventArgs args) {
+
+            try {
+                if (args.Type == TouchTracking.TouchActionType.Pressed)
+                {
+                    loginFacebookBtn.BackgroundColor = Color.FromHex("236bc9");
+                }
+                else
+                {
+                    loginFacebookBtn.BackgroundColor = Color.FromHex("1977f3");
+                    loginFacebook();
+                }
+            }
+            catch (Exception e) { 
+            }
         }
 
         public async void login(object sender, EventArgs e) {
@@ -40,11 +82,11 @@ namespace Cyclon {
             profile.lastName = null;
             profile.name = null;
 
-
-            loginRequest(profile, "/auth/login");
+            loginRequest(profile, "/auth/mobile/login");
         }
 
-        public async void loginFacebook(object senderx, EventArgs ex) {
+        public async void loginFacebook() {
+
             try {
 
                 if (_facebookService.IsLoggedIn) _facebookService.Logout();
@@ -84,12 +126,13 @@ namespace Cyclon {
                 string[] fbRequestFields = { "email", "first_name", "gender", "last_name", "id", "picture.width(720).height(720).as(picture_large)" };
                 string[] fbPermisions = { "email" };
                 await _facebookService.RequestUserDataAsync(fbRequestFields, fbPermisions);
+
             } catch (Exception exx) {
                 Debug.WriteLine(exx.ToString());
             }
         }
 
-        public async void loginGoogle(object senderx, EventArgs ex) {
+        public async void loginGoogle() {
             try {
 
                 _googleService.Logout();
@@ -120,13 +163,15 @@ namespace Cyclon {
 
                             break;
                         case GoogleActionStatus.Canceled:
-                            await App.Current.MainPage.DisplayAlert("Google Auth", "Canceled", "Ok");
+                            
                             break;
                         case GoogleActionStatus.Error:
-                            await App.Current.MainPage.DisplayAlert("Google Auth", "Error", "Ok");
+                            
                             break;
                         case GoogleActionStatus.Unauthorized:
-                            await App.Current.MainPage.DisplayAlert("Google Auth", "Unauthorized", "Ok");
+                            
+                            break;
+                        default:
                             break;
                     }
 
@@ -145,38 +190,146 @@ namespace Cyclon {
 
         public async void loginRequest(CyclonProfile profile, string URL_TARGET) {
 
-            FormUrlEncodedContent content = null;
+            try {
+                UserDialogs.Instance.ShowLoading(AppResources.loading);
 
-            if (URL_TARGET == "/auth/mobile/facebook")
-            {
-                content = new FormUrlEncodedContent(new[] {
+                FormUrlEncodedContent content = null;
+
+                if (URL_TARGET == "/auth/mobile/facebook")
+                {
+                    content = new FormUrlEncodedContent(new[] {
                         new KeyValuePair<string, string>("email", Cipher.encrypt(profile.email)),
                         new KeyValuePair<string, string>("lastName", Cipher.encrypt(profile.lastName)),
                         new KeyValuePair<string, string>("name", Cipher.encrypt(profile.name)),
-                        new KeyValuePair<string, string>("id", Cipher.encrypt( profile.password))
+                        new KeyValuePair<string, string>("id", Cipher.encrypt( profile.password)),
+                        new KeyValuePair<string, string>("lng", Cipher.encrypt(profile.location.lng.ToString())),
+                        new KeyValuePair<string, string>("lat", Cipher.encrypt(profile.location.lat.ToString()))
                     }
-                );
-            }
-            else if (URL_TARGET == "/auth/mobile/google")
-            {
-                content = new FormUrlEncodedContent(new[] {
+                    );
+                }
+                else if (URL_TARGET == "/auth/mobile/google")
+                {
+                    content = new FormUrlEncodedContent(new[] {
                         new KeyValuePair<string, string>("email", Cipher.encrypt(profile.email)),
                         new KeyValuePair<string, string>("familyName", Cipher.encrypt(profile.lastName)),
                         new KeyValuePair<string, string>("givenName", Cipher.encrypt(profile.name)),
-                        new KeyValuePair<string, string>("id", Cipher.encrypt(profile.password))
+                        new KeyValuePair<string, string>("id", Cipher.encrypt(profile.password)),
+                        new KeyValuePair<string, string>("lng", Cipher.encrypt(profile.location.lng.ToString())),
+                        new KeyValuePair<string, string>("lat", Cipher.encrypt(profile.location.lat.ToString()))
                     }
-                );
-            }
-            else {
-                content = new FormUrlEncodedContent(new[] {
+                    );
+                }
+                else
+                {
+                    content = new FormUrlEncodedContent(new[] {
                         new KeyValuePair<string, string>("email", Cipher.encrypt(profile.email)),
                         new KeyValuePair<string, string>("password", Cipher.encrypt(profile.password))
                     }
-                );
-            }
+                    );
+                }
 
-            var response = await RestService.POST(content, URL_TARGET);
-            Debug.WriteLine(response);
+                var response = await RestService.POST(content, URL_TARGET);
+
+                UserDialogs.Instance.HideLoading();
+
+                if (response == "{\"code\":200,\"msg\":\"LOGIN_SUCCESS\"}")
+                {
+
+                    var responsex = await RestService.POST(new FormUrlEncodedContent(new[] { new KeyValuePair<string, string>("email", Cipher.encrypt(profile.email)) }), "/api/mobile/getUser");
+
+                    var toastConfig = new ToastConfig(AppResources.LOG_IN);
+
+                    toastConfig.SetDuration(2000);
+                    toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(78, 177, 62));
+
+                    UserDialogs.Instance.Toast(toastConfig);
+
+                    Preferences.Set("email", Cipher.encrypt(profile.email));
+                    Preferences.Set("lastName", Cipher.encrypt(responsex.Split('/')[1]));
+                    Preferences.Set("name", Cipher.encrypt(responsex.Split('/')[0]));
+                    Preferences.Set("password", Cipher.encrypt(profile.password));
+                    Preferences.Set("lng", Cipher.encrypt(profile.location.lng.ToString()));
+                    Preferences.Set("lat", Cipher.encrypt(profile.location.lat.ToString()));
+                    Preferences.Set("typeLogin", URL_TARGET);
+                    Preferences.Set("receiveAlerts", true);
+
+                    await Navigation.PushAsync(new AppPage());
+                }
+                else if (response == "{\"code\":200,\"msg\":[\"LOGIN_SUCCESS\"]}")
+                {
+
+                    var responsex = await RestService.POST(new FormUrlEncodedContent(new[] { new KeyValuePair<string, string>("email", Cipher.encrypt(profile.email)) }), "/api/mobile/getUser");
+
+                    var toastConfig = new ToastConfig(AppResources.LOG_IN);
+
+                    toastConfig.SetDuration(2000);
+                    toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(78, 177, 62));
+
+                    UserDialogs.Instance.Toast(toastConfig);
+
+                    Preferences.Set("email", Cipher.encrypt(profile.email));
+                    Preferences.Set("lastName", Cipher.encrypt(responsex.Split('/')[1]));
+                    Preferences.Set("name", Cipher.encrypt(responsex.Split('/')[0]));
+                    Preferences.Set("password", Cipher.encrypt(profile.password));
+                    Preferences.Set("lng", Cipher.encrypt(profile.location.lng.ToString()));
+                    Preferences.Set("lat", Cipher.encrypt(profile.location.lat.ToString()));
+                    Preferences.Set("typeLogin", URL_TARGET);
+                    Preferences.Set("receiveAlerts", true);
+
+                    await Navigation.PushAsync(new AppPage());
+                }
+                else if (response == "{\"code\":200,\"msg\":\"ACCOUNT_CREATED\"}")
+                {
+                    var toastConfig = new ToastConfig(AppResources.ACCOUNT_CREATED_SUCCESS);
+
+                    toastConfig.SetDuration(2000);
+                    toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(78, 177, 62));
+
+                    UserDialogs.Instance.Toast(toastConfig);
+
+                    Preferences.Set("email", Cipher.encrypt(profile.email));
+                    Preferences.Set("lastName", Cipher.encrypt(profile.lastName));
+                    Preferences.Set("name", Cipher.encrypt(profile.name));
+                    Preferences.Set("password", Cipher.encrypt(profile.password));
+                    Preferences.Set("lng", Cipher.encrypt(profile.location.lng.ToString()));
+                    Preferences.Set("lat", Cipher.encrypt(profile.location.lat.ToString()));
+                    Preferences.Set("typeLogin", URL_TARGET);
+                    Preferences.Set("receiveAlerts", true);
+
+                    await Navigation.PushAsync(new AppPage());
+                }
+                else if (response == "{\"code\":401,\"msg\":[\"USER_NOT_EXIST\"]}")
+                {
+                    var toastConfig = new ToastConfig(AppResources.USER_NOT_EXIST);
+
+                    toastConfig.SetDuration(2000);
+                    toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(210, 49, 40));
+
+                    UserDialogs.Instance.Toast(toastConfig);
+                }
+                else if (response == "{\"code\":401,\"msg\":[\"INCORRECT_PASSWORD\"]}")
+                {
+                    var toastConfig = new ToastConfig(AppResources.PASSWORD_INCORRECT);
+
+                    toastConfig.SetDuration(2000);
+                    toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(210, 49, 40));
+
+                    UserDialogs.Instance.Toast(toastConfig);
+                }
+                else
+                {
+                    var toastConfig = new ToastConfig(AppResources._500);
+
+                    toastConfig.SetDuration(2000);
+                    toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(210, 49, 40));
+
+                    UserDialogs.Instance.Toast(toastConfig);
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
 
         }
 

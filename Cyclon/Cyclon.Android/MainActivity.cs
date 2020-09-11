@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -31,11 +31,9 @@ namespace Cyclon.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
-            //var intent = new Intent(this, typeof(CyclonSocket));
-            //StartService(intent);
-
             FacebookClientManager.Initialize(this);
             GoogleClientManager.Initialize(this);
+            UserDialogs.Init(this);
 
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

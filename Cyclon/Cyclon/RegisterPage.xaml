@@ -6,112 +6,139 @@
     x:Class="Cyclon.RegisterPage"
     NavigationPage.HasNavigationBar="false">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="labelTitleStyle" TargetType="Label">
+                <Setter Property = "FontFamily" Value="Arial" />
+                <Setter Property = "TextColor"  Value="Black" />
+                <Setter Property = "HorizontalOptions"  Value="CenterAndExpand" />
+                <Setter Property = "FontSize"  Value="Title" />
+                <Setter Property = "TextTransform"  Value="Uppercase" />
+            </Style>
+
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property = "FontFamily" Value="Arial" />
+                <Setter Property = "TextColor"  Value="Black" />
+                <Setter Property = "HorizontalOptions"  Value="FillAndExpand" />
+                <Setter Property = "FontSize"  Value="Medium" />
+                <Setter Property="Margin" Value="10,0,10,0" />
+            </Style>
+
+            <Style x:Key="labelErrorStyle" TargetType="Label">
+                <Setter Property = "FontFamily" Value="Arial" />
+                <Setter Property = "TextColor"  Value="Red" />
+                <Setter Property = "HorizontalOptions"  Value="FillAndExpand" />
+                <Setter Property = "FontSize"  Value="Small" />
+            </Style>
+
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Setter Property="Margin" Value="10,0,10,0" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ScrollView Orientation="Vertical">
 
         <ScrollView.Content>
 
             <StackLayout>
 
-                <Label
-                    Margin="0,20,0,20"
-                    Text="{x:Static resource:AppResources.register_page}"
-                    TextColor="Black"
-                    FontSize="Large"
-                    HorizontalOptions="Center"/>
+                <Label 
+                    Margin="0,50,0,30"
+                    Text="{x:Static resource:AppResources.registerCyclon}"
+                    Style="{StaticResource labelTitleStyle}"/>
 
                 <!-- Name -->
 
                 <Label 
                     Text="{x:Static resource:AppResources.name}"
-                    TextColor="Black"
-                    FontSize="Small"/>
+                    Style="{StaticResource labelStyle}"/>
 
                 <Entry 
                     ReturnType="Next"
                     Keyboard="Text"
                     Placeholder="example"
+                    Style="{StaticResource entryStyle}"
                     x:Name="name"/>
 
                 <Label 
                     Text=""
-                    TextColor="Red"
-                    FontSize="Small"
-                    IsVisible="False"
+                    Margin="10,0,10,0"
+                    Style="{StaticResource labelErrorStyle}"   
                     x:Name="nameError"/>
 
                 <!-- Last Name -->
 
                 <Label 
                     Text="{x:Static resource:AppResources.lastName}"
-                    TextColor="Black"
-                    FontSize="Small"/>
+                    Style="{StaticResource labelStyle}"/>
 
                 <Entry 
                     ReturnType="Next"
                     Keyboard="Text"
                     Placeholder="example"
+                    Style="{StaticResource entryStyle}"
                     x:Name="lastName"/>
 
                 <Label 
                     Text=""
-                    TextColor="Red"
-                    FontSize="Small"
-                    IsVisible="False"
+                    Margin="10,0,10,0"
+                    Style="{StaticResource labelErrorStyle}"   
                     x:Name="lastNameError"/>
 
                 <!-- Email -->
 
                 <Label 
                     Text="{x:Static resource:AppResources.email}"
-                    TextColor="Black"
-                    FontSize="Small"/>
+                    Style="{StaticResource labelStyle}"/>
 
                 <Entry 
                     ReturnType="Next"
                     Keyboard="Email"
                     Placeholder="example@example.com"
+                    Style="{StaticResource entryStyle}"
                     x:Name="email"/>
 
                 <Label 
                     Text=""
-                    TextColor="Red"
-                    FontSize="Small"
-                    IsVisible="False"
+                    Margin="10,0,10,0"
+                    Style="{StaticResource labelErrorStyle}"   
                     x:Name="emailError"/>
 
                 <!-- Password -->
 
                 <Label 
                     Text="{x:Static resource:AppResources.password}"
-                    TextColor="Black"
-                    FontSize="Small"/>
+                    Style="{StaticResource labelStyle}"/>
 
                 <Entry 
                     ReturnType="Next"
                     IsPassword="True"
                     Placeholder="**********"
+                    Style="{StaticResource entryStyle}"
                     x:Name="password"/>
 
                 <Label 
                     Text="{x:Static resource:AppResources.cpassword}"
-                    TextColor="Black"
-                    FontSize="Small"/>
+                    Style="{StaticResource labelStyle}"/>
 
                 <Entry 
                     ReturnType="Done"
                     IsPassword="True"
                     Placeholder="***********"
+                    Style="{StaticResource entryStyle}"
                     x:Name="cpassword"/>
 
                 <Label 
                     Text=""
-                    TextColor="Red"
-                    FontSize="Small"
-                    IsVisible="False"
+                    Style="{StaticResource labelErrorStyle}"   
+                    Margin="10,0,10,10"
                     x:Name="passwordError"/>
 
                 <Button 
-                    Margin="0,30,0,0"
+                    Margin="10,0,10,60"
                     Text="{x:Static resource:AppResources.register}"
                     BackgroundColor="#5e57e6"
                     Clicked="register"

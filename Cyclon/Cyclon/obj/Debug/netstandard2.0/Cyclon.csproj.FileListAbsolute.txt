@@ -13,8 +13,12 @@ C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\Mai
 C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\RegisterPage.xaml.g.cs
 C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\Cyclon.AssemblyInfoInputs.cache
 C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\Cyclon.AssemblyInfo.cs
-C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\es\Cyclon.resources.dll
 C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\Cyclon.dll
 C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\ref\Cyclon.dll
 C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\Cyclon.pdb
+C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\AppPage.xaml.g.cs
+C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\Map.xaml.g.cs
+C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\Twitter.xaml.g.cs
+C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\UpdateData.xaml.g.cs
+C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon\obj\Debug\netstandard2.0\XamlC.stamp

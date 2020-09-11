@@ -3,6 +3,8 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "Cyclon.Android.dll" comes first in this list. */
 		"Cyclon.Android.dll",
+		"Acr.UserDialogs.dll",
+		"AndHUD.dll",
 		"Bolts.AppLinks.dll",
 		"Bolts.Tasks.dll",
 		"Cyclon.dll",
@@ -15,6 +17,10 @@ public class MonoPackageManager_Resources {
 		"Plugin.LocalNotifications.Abstractions.dll",
 		"Plugin.LocalNotifications.dll",
 		"SocketIoClientDotNet.dll",
+		"TouchTracking.dll",
+		"TouchTracking.Droid.dll",
+		"TouchTracking.Forms.dll",
+		"TouchTracking.Forms.Droid.dll",
 		"WebSocket4Net.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",

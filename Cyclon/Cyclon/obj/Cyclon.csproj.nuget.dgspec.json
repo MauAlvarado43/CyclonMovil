@@ -43,6 +43,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.1.0.452, )"
+            },
             "EngineIoClientDotNet": {
               "target": "Package",
               "version": "[0.9.22, )"
@@ -68,6 +72,10 @@
             "SocketIoClientDotNet": {
               "target": "Package",
               "version": "[0.9.13, )"
+            },
+            "TouchTracking.Forms": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Xam.Plugins.Notifier": {
               "target": "Package",
