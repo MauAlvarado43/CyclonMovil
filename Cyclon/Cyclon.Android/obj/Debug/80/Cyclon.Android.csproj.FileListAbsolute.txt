@@ -1,3 +1,0 @@
-C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon.Android\obj\Debug\80\MonoAndroid,Version=v8.0.AssemblyAttributes.cs
-C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon.Android\obj\Debug\80\build.props
-C:\Users\Mauricio\source\repos\Cyclon\Cyclon\Cyclon.Android\obj\Debug\80\adb.props
